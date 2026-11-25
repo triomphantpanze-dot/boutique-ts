@@ -1,13 +1,33 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>boutique-ts</title>
+    <title>Mini-boutique</title>
   </head>
   <body>
-    <div id="app"></div>
+    <header class="entete">
+      <h1>Mini-boutique</h1>
+      <p>Panier: <span id="compteur">0</span> article(s) </p>
+    </header>
+    <main class="page"></main>
+    <section> 
+      <div class="filtre">
+        <input type="search" id="recherche" placeholder="Rechercher un produit"> 
+        <select name="" id="filtre-categorie"><option value="toutes">toutes</option>
+        <option value="vetements">vetements</option>
+        <option value="chaussures">chaussures</option>
+        <option value="accessoires">accessoires</option>
+        <option value="maison">maison</option></select>
+      </div>
+      <div id="catalogue" class="grille"></div>
+    </section>
+    <aside class="panier">
+      <h2>mon panier</h2>
+      <ul id="ligne-panier"></ul>
+      <p class="total">total: <strong id="total">>0 fcfa</strong></p>
+    </aside>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
